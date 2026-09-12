@@ -1,0 +1,14 @@
+pypdf
+python-docx
+sentence-transformers
+qdrant-client
+rank-bm25
+fastapi
+uvicorn[standard]
+python-dotenv
+langgraph
+langchain
+langchain-openai
+openai
+pytest
+httpx
