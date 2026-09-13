@@ -1,9 +1,14 @@
+import os
+
+from dotenv import load_dotenv
 from qdrant_client import QdrantClient
 from qdrant_client.models import (
     Distance,
     VectorParams,
     PointStruct,
 )
+
+load_dotenv()
 
 
 class VectorStore:
@@ -14,12 +19,22 @@ class VectorStore:
         vector_size: int = 384,
         path: str = "data/qdrant",
     ):
-
-        self.client = QdrantClient(
-            path=path
-        )
-
         self.collection_name = collection_name
+
+        qdrant_url = os.getenv("QDRANT_URL")
+        qdrant_api_key = os.getenv("QDRANT_API_KEY")
+
+        if qdrant_url and qdrant_api_key:
+            # Cloud mode
+            self.client = QdrantClient(
+                url=qdrant_url,
+                api_key=qdrant_api_key,
+            )
+        else:
+            # Local mode
+            self.client = QdrantClient(
+                path=path
+            )
 
         collections = (
             self.client
@@ -33,7 +48,6 @@ class VectorStore:
         ]
 
         if collection_name not in existing:
-
             self.client.create_collection(
                 collection_name=collection_name,
                 vectors_config=VectorParams(
@@ -47,14 +61,12 @@ class VectorStore:
         documents,
         embeddings,
     ):
-
         points = []
 
         for document, embedding in zip(
             documents,
             embeddings,
         ):
-
             points.append(
                 PointStruct(
                     id=document["id"],
@@ -76,7 +88,6 @@ class VectorStore:
         query_vector,
         limit=5,
     ):
-
         results = self.client.query_points(
             collection_name=self.collection_name,
             query=query_vector.tolist(),
@@ -86,8 +97,6 @@ class VectorStore:
         return results.points
 
     def close(self):
-        """Explicitly close the Qdrant client."""
-
         if self.client is not None:
             self.client.close()
             self.client = None

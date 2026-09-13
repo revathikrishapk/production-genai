@@ -1,0 +1,106 @@
+[
+  {
+    "id": "1e9fa1e2-8b11-456b-a905-ebd895fb9e6d",
+    "text": "FOUNDATIONS\n \nOF\n \nDATA\n \nSCIENCE\n \nASSESSMENT\n \n-\n \n7\n \n \nName\n \n:\n \nRevathi\n \nKrishna\n \nP\n \nK\n \nReg\n \nNo\n \n:\n \n26MAG0065\n \n \nPAGE\n \nRANK\n \nUSING\n \nMARKOV\n \nCHAIN\n \nMODEL\n \n \n \nObjective:\n \nImplement\n \nthe\n \nPageRank\n \nalgorithm\n \nusing\n \na\n \nMarkov\n \nChain\n \nmodel\n \non\n \na\n \nsimulated\n \nweb\n \ngraph\n \nand\n \nanalyse\n \nthe\n \nimpact\n \nof\n \nthe\n \ndamping\n \nfactor.\n \n \n1.Importing\n \ndependencies\n \n \n \n2.Create\n \nSimulated\n \nWeb\n \nGraph",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 1
+    }
+  },
+  {
+    "id": "632627b3-30da-4bb4-af64-a5c0c6aeefbe",
+    "text": "3.Build\n \nthe\n \nMarkov\n \nTransition\n \nMatrix",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 2
+    }
+  },
+  {
+    "id": "4e8fd468-e1b8-4632-9c6e-c482707e4d67",
+    "text": "4.\n \nImplement\n \nPageRank\n \nFrom\n \nScratch",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 3
+    }
+  },
+  {
+    "id": "be076ade-0923-4545-b32a-2a2df1efdf6b",
+    "text": "5.Run\n \nPageRank\n \n+\n \nDamping\n \nExperiment",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 4
+    }
+  },
+  {
+    "id": "df62b6d7-0151-493f-b21c-c84f6723c6ba",
+    "text": "6.Visualize\n \nDamping\n \nFactor\n \nImpact\n \n \n \n \nConvergence",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 5
+    }
+  },
+  {
+    "id": "21d28c4b-3580-4b51-8013-bb55359b73f7",
+    "text": "7.Validation",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 6
+    }
+  },
+  {
+    "id": "7d71d376-43dd-4025-8101-f2636b6d4e94",
+    "text": "FINAL\n \nANALYSIS\n \n●\n \nPageRank\n \nwas\n \nimplemented\n \nusing\n \na\n \nMarkov\n \nChain\n \nmodel.\n \n●\n \nEach\n \nwebpage\n \nwas\n \ntreated\n \nas\n \na\n \nstate\n \nand\n \nhyperlinks\n \nwere\n \ntreated\n \nas\n \ntransitions\n \nbetween\n \nstates.\n \n●\n \nDangling\n \nnodes\n \nwere\n \nhandled\n \nby\n \nassigning\n \nuniform\n \ntransition\n \nprobabilities\n \nacross\n \nall\n \npages.\n \n●\n \nThe\n \ndamping\n \nfactor\n \ncontrols\n \nthe\n \nbalance\n \nbetween\n \nfollowing\n \nhyperlinks\n \nand\n \nteleporting\n \nto\n \nanother\n \npage.\n \n●\n \nLower\n \nα\n \nvalues\n \nproduce\n \nmore\n \nteleportation\n \nand\n \ntherefore\n \nmake\n \nPageRank\n \nmore\n \nuniform.\n \n●\n \nHigher\n \nα\n \nvalues\n \nmake\n \nPageRank\n \nmore\n \ndependent\n \non\n \nthe\n \nactual\n \nhyperlink\n \nstructure.\n \n●\n \nAs\n \nα\n \napproaches\n \n1,\n \nconvergence\n \ngenerally\n \nbecomes\n \nslower.\n \n●\n \nAt\n \nα\n \n=\n \n0.85,\n \nthe\n \nhighest-ranked\n \npage\n \nin\n \nour\n \nsimulation\n \nis:\n \nPage\n \n{top_page}\n \n●\n \nOur\n \nimplementation\n \nwas\n \ncompared\n \nwith\n \nNetworkX\n \nand\n \nthe\n \nvery\n \nsmall\n \nnumerical\n \ndifference\n \nvalidat",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 7
+    }
+  },
+  {
+    "id": "e32c6f98-6a95-4981-a8b1-9e8441fd1149",
+    "text": "he\n \nhighest-ranked\n \npage\n \nin\n \nour\n \nsimulation\n \nis:\n \nPage\n \n{top_page}\n \n●\n \nOur\n \nimplementation\n \nwas\n \ncompared\n \nwith\n \nNetworkX\n \nand\n \nthe\n \nvery\n \nsmall\n \nnumerical\n \ndifference\n \nvalidates\n \nour\n \nimplementation.\n \n \nCONCLUSION\n \nThe\n \nexperiment\n \ndemonstrates\n \nthat\n \nPageRank\n \ncan\n \nbe\n \ninterpreted\n \nas\n \nthe\n \nstationary\n \ndistribution\n \nof\n \na\n \nMarkov\n \nChain.\n \nThe\n \ndamping\n \nfactor\n \nis\n \nimportant\n \nbecause\n \nit\n \ncontrols\n \nboth\n \nthe\n \ninfluence\n \nof\n \nthe\n \nweb\n \ngraph\n \nstructure\n \nand\n \nthe\n \nconvergence\n \nbehaviour\n \nof\n \nthe\n \nalgorithm.",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 7
+    }
+  },
+  {
+    "id": "00a748f2-7991-42de-a824-4621ea1b5542",
+    "text": "PageRank Using a Markov Chain Model\nImplementation on a simulated web graph\nand analysis of the damping factor\nFoundations of Data Science • Assessment 7",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 8
+    }
+  },
+  {
+    "id": "c8b9dee1-89b5-4bff-8529-24357af6f612",
+    "text": "1. Simulated Web Graph & Markov Model\nEight webpages are represented as states in a directed graph.\n• 8 webpages (A–H) with 14 directed hyperlinks.\n• Webpages are states; hyperlinks are possible transitions.\n• The adjacency matrix is converted into a probability \ntransition matrix P .\n• Each row of P sums to 1, forming a Markov transition \nmatrix.\n• Page H is a dangling node and is assigned a uniform \ntransition distribution.\nA\n B\nC\n D\nE\nF\nG\n H",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 9
+    }
+  },
+  {
+    "id": "624c920f-0d2b-48ad-953b-2f8c009674b9",
+    "text": "2. PageRank as a Markov Chain\nPower iteration finds the stationary probability distribution.\n• Initialize the PageRank vector uniformly: r₀ = [1/N, …, \n1/N].\n• Use the damping factor α to combine link-following and \nteleportation.\n• Google matrix: G = αP + (1−α)E.\n• Iterate: rₜ₊₁ = rₜG until the change is below the \ntolerance.\n• PageRank is a probability distribution, so the scores sum \nto 1.\nG = αP + (1−α)E\nrₜ₊₁ = rₜG\nΣ PageRank = 1",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 10
+    }
+  },
+  {
+    "id": "3c5bcebb-414f-46d1-bcd1-4f9f6b43ddd1",
+    "text": "3. Impact of the Damping Factor\nExperiment: α = 0.50, 0.70, 0.85, 0.90, 0.95, 0.99.\n• Lower α means more teleportation and \na more uniform distribution.\n• Higher α makes rankings more \ndependent on hyperlink structure.\n• Page C rises from 0.1920 at α=0.50 to \n0.2602 at α=0.99.\n• Page H falls from 0.0925 to 0.0403.\n• Convergence takes 20, 29, 39, 43, 48 \nand 53 iterations respectively.",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 11
+    }
+  },
+  {
+    "id": "29f7388b-2fa2-4b23-9e16-6de387de2f9b",
+    "text": "4. Results, Validation & Conclusion\n• At α = 0.85, Page C has the highest PageRank: ≈ 0.2399.\n• Page E is second with ≈ 0.2275.\n• The custom implementation was validated against NetworkX.\n• Maximum absolute difference: ≈ 1.15 × 10⁻¹⁰.\n• PageRank can be interpreted as the stationary distribution of a \nMarkov chain.\n• The damping factor controls both ranking behaviour and \nconvergence.\nKEY RESULT\nα = 0.85\nTop page: C\nPageRank ≈ 0.2399\nValidation error\n≈ 1.15 × 10⁻¹⁰\nReference: NetworkX PageRank documentation",
+    "metadata": {
+      "source": "fds_assessment__7__26MAG0065.pdf",
+      "page": 12
+    }
+  }
+]
