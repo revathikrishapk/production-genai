@@ -4,8 +4,5 @@ __pycache__/
 .env
 .pytest_cache/
 
-# Local Qdrant database
 data/qdrant/
-
-# Ignore raw source documents
 data/raw/
