@@ -1,3 +1,7 @@
+import os
+
+from dotenv import load_dotenv
+
 from app.ingestion.storage import load_documents
 
 from app.embeddings.embedder import Embedder
@@ -10,6 +14,10 @@ from app.retrieval.reranker import Reranker
 from app.llm.client import OpenRouterClient
 
 from app.agent.graph import build_graph
+
+
+# Load environment variables from .env
+load_dotenv()
 
 
 class RAGPipeline:
@@ -68,10 +76,41 @@ class RAGPipeline:
         # --------------------------------------------------
         # 5. Reranker
         # --------------------------------------------------
+        #
+        # Reranking is expensive in terms of memory.
+        #
+        # Local development:
+        #     ENABLE_RERANKER=true
+        #
+        # Render free deployment:
+        #     ENABLE_RERANKER=false
+        #
+        # Default = true so your existing local behaviour
+        # remains unchanged.
+        # --------------------------------------------------
 
-        print("Loading reranker...")
+        self.enable_reranker = (
+            os.getenv(
+                "ENABLE_RERANKER",
+                "true"
+            ).lower()
+            == "true"
+        )
 
-        self.reranker = Reranker()
+        if self.enable_reranker:
+
+            print("Loading reranker...")
+
+            self.reranker = Reranker()
+
+        else:
+
+            print(
+                "Reranker disabled "
+                "(memory-constrained deployment)."
+            )
+
+            self.reranker = None
 
         # --------------------------------------------------
         # 6. LLM
